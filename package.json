@@ -1,0 +1,19 @@
+{
+  "name": "gulplate",
+  "version": "1.0.0",
+  "description": "Gulplate is a simple template that I created to make my life a little simpler. It uses pug(formerly Jade) for templating and gulp for processing.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
