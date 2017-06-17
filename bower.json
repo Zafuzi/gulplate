@@ -1,0 +1,23 @@
+{
+  "name": "gulplate",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^7.0.0",
+    "modernizer": "^2.8.2",
+    "typicons.font": "typicons#^2.0.8",
+    "Steady.js": "*",
+    "onscrolling": "^0.3.2",
+    "smooth-scroll": "^1.0.1"
+  }
+}
