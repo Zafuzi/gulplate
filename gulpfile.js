@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     gp_rename = require('gulp-rename'),
     gp_concat = require('gulp-concat'),
     gp_uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
     cleanCSS = require('gulp-clean-css');
 
 
@@ -20,7 +21,7 @@ gulp.task("minifyvendor", function() {
         .pipe(gulp.dest('.'))
         .pipe(gp_rename('vendor.min.js'))
         .pipe(gp_uglify())
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest('production/scripts'));
 
     gulp.src(vendor.css)
         .pipe(cleanCSS())
@@ -31,7 +32,7 @@ gulp.task('html', function() {
     return watch('./build/templates/*.pug', function() {
         gulp.src('./build/templates/*.pug')
             .pipe(pug())
-            .pipe(gulp.dest('production/html'));
+            .pipe(gulp.dest('production'));
     });
 });
 
@@ -59,4 +60,11 @@ gulp.task('autoprefixer', function() {
     });
 });
 
-gulp.task('default', ['html', 'autoprefixer', 'css', "minifyvendor"]);
+// Minify images on the fly
+gulp.task('images', () =>
+    gulp.src('build/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('production/images'))
+);
+
+gulp.task('default', ['html', 'autoprefixer', 'css', "minifyvendor", "images"]);

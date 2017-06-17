@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.less"],"names":[],"mappings":"AAAA;IACI,+BAAuB;YAAvB,uBAAuB;CAC1B","file":"../styles.less","sourcesContent":["*{\n    box-sizing: border-box;\n}"]}

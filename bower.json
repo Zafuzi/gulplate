@@ -19,5 +19,8 @@
     "Steady.js": "*",
     "onscrolling": "^0.3.2",
     "smooth-scroll": "^1.0.1"
+  },
+  "devDependencies": {
+    "normalize-css": "^7.0.0"
   }
 }
